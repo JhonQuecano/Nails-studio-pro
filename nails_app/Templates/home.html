@@ -1,57 +1,69 @@
 {% load static %}
 
-{% block title %}Página de Prueba{% endblock %}
-{% block estilos %}<link rel="stylesheet" href="{% static 'Css/styles.css' %}">{% endblock %}
-
+{% block estilos %}
+<link rel="stylesheet" href="{% static 'Css/styles.css' %}">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+{% endblock %}
 
 {% block nav %}
 <header>
   <div class="logo">
-<img src="{% static 'img/logo.jpg' %}" alt="Logo">  </div>
- <nav>
+    <img src="{% static 'img/logo.jpg' %}" alt="Logo Nails Studio Pro">
+    <title>Nails Studio Pro</title>
+  </div>
+  <nav>
     <ul>
-     <div class="ini"><li><a href="#">Inicio</a></li></div>
+      <li><a href="#">Inicio</a></li>
       <li><a href="#">Servicios</a></li>
-      <li><a href="#">Acerca de</a></li>
-      <div class="inise"><li><a href="#">Contacto</a></li></div>
+      <li><a href="#">Galería</a></li>
+      <li><a href="#">Citas</a></li>
+      <li><a href="#">Contacto</a></li>
     </ul>
- </nav>
+  </nav>
 </header>
 {% endblock %}
 
 {% block content %}
-<div class="contenedor">
-    <main>
-        <h1>Mi Página de Prueba</h1>
-        <div class="linea1"></div>
-        <div class="linea2"></div>
-        <p>Esta es una página de ejemplo para probar estilos, imágenes y estructura.</p>
-        
-        <div class="features">
-          <div class="feature">
-            <img src="{% static 'img/feature1.png' %}" alt="Función 1">
-            <h2>Función de Ejemplo</h2>
-          </div>
-          <div class="feature">
-            <img src="{% static 'img/feature2.png' %}" alt="Función 2">
-            <h2>Otra Función</h2>
-          </div>
-          <div class="feature">
-            <img src="{% static 'img/feature3.png' %}" alt="Función 3">
-            <h2>Función Adicional</h2>
-          </div>
-        </div>
-    </main>
-</div>
+<section class="hero">
+  <div class="hero-text">
+    <h1>Cuidamos tus manos como joyas</h1>
+    <p>Descubre nuestros servicios de manicura, nail art y spa de manos en un ambiente moderno y elegante.</p>
+    <div class="hero-buttons">
+      <a href="#" class="btn-primary">Reservar cita</a>
+      <a href="#" class="btn-secondary">Ver estilos</a>
+    </div>
+  </div>
+  <div class="hero-img">
+    <img src="{% static 'img/hero-nails.jpg' %}" alt="Uñas decoradas">
+  </div>
+</section>
+
+<section class="services">
+  <h2>Nuestros Servicios</h2>
+  <div class="service-cards">
+    <div class="card">
+      <img src="{% static 'img/gel-nails.jpg' %}" alt="Uñas en gel">
+      <h3>Uñas en gel</h3>
+    </div>
+    <div class="card">
+      <img src="{% static 'img/spa.jpg' %}" alt="Spa de manos">
+      <h3>Spa de manos</h3>
+    </div>
+    <div class="card">
+      <img src="{% static 'img/nail-art.jpg' %}" alt="Nail Art personalizado">
+      <h3>Nail Art personalizado</h3>
+    </div>
+  </div>
+</section>
+
 {% endblock %}
 
 {% block footer %}
 <footer>
-    <p>&copy; 2024 Página de Prueba. Todos los derechos reservados.</p>
-    <div class="contact">
-        <h2>Contáctanos:</h2>
-        <p>+57 numero cel</p>
-        <p>liz@prueba.com</p>
-      </div>
+  <p>&copy; 2025 Nails Studio Pro. Todos los derechos reservados.</p>
+  <div class="contact">
+    <p>📞 +57 300 000 0000</p>
+    <p>✉️ contacto@nailsstudiopro.com</p>
+  </div>
 </footer>
 {% endblock %}
