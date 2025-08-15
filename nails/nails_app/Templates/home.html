@@ -1,0 +1,57 @@
+{% load static %}
+
+{% block title %}Página de Prueba{% endblock %}
+{% block estilos %}<link rel="stylesheet" href="{% static 'Css/styles.css' %}">{% endblock %}
+
+
+{% block nav %}
+<header>
+  <div class="logo">
+<img src="{% static 'img/logo.jpg' %}" alt="Logo">  </div>
+ <nav>
+    <ul>
+     <div class="ini"><li><a href="#">Inicio</a></li></div>
+      <li><a href="#">Servicios</a></li>
+      <li><a href="#">Acerca de</a></li>
+      <div class="inise"><li><a href="#">Contacto</a></li></div>
+    </ul>
+ </nav>
+</header>
+{% endblock %}
+
+{% block content %}
+<div class="contenedor">
+    <main>
+        <h1>Mi Página de Prueba</h1>
+        <div class="linea1"></div>
+        <div class="linea2"></div>
+        <p>Esta es una página de ejemplo para probar estilos, imágenes y estructura.</p>
+        
+        <div class="features">
+          <div class="feature">
+            <img src="{% static 'img/feature1.png' %}" alt="Función 1">
+            <h2>Función de Ejemplo</h2>
+          </div>
+          <div class="feature">
+            <img src="{% static 'img/feature2.png' %}" alt="Función 2">
+            <h2>Otra Función</h2>
+          </div>
+          <div class="feature">
+            <img src="{% static 'img/feature3.png' %}" alt="Función 3">
+            <h2>Función Adicional</h2>
+          </div>
+        </div>
+    </main>
+</div>
+{% endblock %}
+
+{% block footer %}
+<footer>
+    <p>&copy; 2024 Página de Prueba. Todos los derechos reservados.</p>
+    <div class="contact">
+        <h2>Contáctanos:</h2>
+        <p>+57 numero cel</p>
+        <p>liz@prueba.com</p>
+      </div>
+</footer>
+{% endblock %}
