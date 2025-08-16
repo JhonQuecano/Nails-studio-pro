@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -10,22 +16,26 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 50px;
+  padding: 5px 50px;
   background-color: #F3E4DC;
 }
 
 header .logo {
-     font-family: 'Poppins', sans-serif;
-  font-size: 32px;
-  font-weight: 300;
-  height: 60px;
-  letter-spacing: 2px;
+display: flex;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  color: #000; 
+  padding-top: 1%;
+}
+
+header .logo img {
+  height: 50px; 
 }
 
 header nav ul {
   display: flex;
   list-style: none;
-  gap: 25px;
+  gap: 40px;
 }
 
 header nav ul li a {
@@ -54,8 +64,7 @@ header nav ul li a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 60px 50px;
-  gap: 40px;
+  padding: 40 40px 40px 50px; 
 }
 
 .hero-text h1 {
@@ -64,15 +73,30 @@ header nav ul li a:hover {
   color: #000000;
   font-weight: 300
 }
-
 .hero-text p {
-  font-size: 30px;
-    color: #000000;
-  margin: 20px 0;
-  padding-bottom: 5%;
+  font-size: 20px;    
+  color: #000000;
+  padding-bottom: 2%;
   font-family: 'Poppins', sans-serif;
-  font-weight: 300
+  font-weight: 300;
 }
+
+.hero-buttons {
+  display: flex;
+  padding-top: 20px;
+  gap: 20px;
+}
+
+.text-with-image {
+  display: flex;
+  align-items: center; 
+}
+
+.text-with-image img {
+  width: 30px;  
+  height: auto;
+}
+
 
 .btn-primary {
   background-color: #C89071;
@@ -91,7 +115,7 @@ header nav ul li a:hover {
 .btn-secondary {
   background-color: #c88f71;
   color: #ffffff;
-  padding: 10px 50px;
+  padding: 13px 50px;
   border-radius: 40px;
   text-decoration: none;
   font-weight: 600;
@@ -133,6 +157,33 @@ header nav ul li a:hover {
 .card img {
   width: 100%;
   border-radius: 8px;
+}
+
+.botones {
+  color: rgb(0, 0, 0);
+  padding: 5px 13px;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: 400;
+  font-family: 'Poppins', sans-serif;
+}
+
+.botones:hover {
+  background-color: #C89071;
+  color: white;
+}
+
+.login{
+    background-color: #C89071;
+    color: white;
+  padding: 5px 40px;
+    border-radius: 40px;
+    text-decoration: none;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+}
+.login:hover {
+  background-color: #a5765c;
 }
 
 .gallery {

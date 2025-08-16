@@ -7,15 +7,16 @@
 
 {% block nav %}
 <header>
-<div class="logo">Nails Studio Pro</div>
-  </div>
-  <nav>
+<div class="logo">
+    <img src="{% static 'img/logo.png' %}" alt="Logo Nails Studio Pro">
+  </div>  <nav>
     <ul>
-      <li><a href="#">Inicio</a></li>
-      <li><a href="#">Servicios</a></li>
-      <li><a href="#">Galería</a></li>
-      <li><a href="#">Citas</a></li>
-      <li><a href="#">Contacto</a></li>
+      <a href="#" class="botones">Inicio</a>
+      <a href="#" class="botones">Servicios</a>
+      <a href="#" class="botones">Galeria</a>
+      <a href="#" class="botones">Citas</a>
+      <a href="#" class="botones">Contacto</a>
+      <a href="#" class="login">Inicio Sesion</a>
     </ul>
   </nav>
 </header>
@@ -23,19 +24,26 @@
 
 {% block content %}
 <section class="hero">
-  <div class="hero-text">
-    <h1>Bienvenida, hermosa</h1>
-<p class="text-with-image">
-  <img src="{% static 'img/estrellita.png' %}" alt="Icono de estrellita">
-  Cuidamos tus manos como joyas
-</p>
-    <div class="hero-buttons">
+<div class="hero-text">
+  <h1>Bienvenida, hermosa</h1>
+
+  <div class="text-with-image">
+    <img src="{% static 'img/estrellita.png' %}" alt="Icono de estrellita">
+    <p>En nuestro centro de belleza cuidamos</p>
+  </div>
+  <p> cada detalle en manicure, pedicure, peluquería,</p>
+  <p> pestañas y cejas para realzar tu belleza natural</p>
+  <p>y brindarte una experiencia única. </p>
+      <div class="hero-buttons">
       <a href="#" class="btn-primary">Reservar cita</a>
       <a href="#" class="btn-secondary">Ver estilos</a>
     </div>
   </div>
   <div class="hero-img">
-    <img src="{% static 'img/hero-nails.jpg' %}" alt="Uñas decoradas">
+    <img src="{% static 'img/uñas_1.png' %}" alt="Uñas decoradas">
+        <img src="{% static 'img/uñas_2.png' %}" alt="Uñas decoradas">
+    <img src="{% static 'img/uñas_3.png' %}" alt="Uñas decoradas">
+
   </div>
 </section>
 
