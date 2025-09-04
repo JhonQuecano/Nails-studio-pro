@@ -1,15 +1,15 @@
-{% load static %}
-
-{% block estilos %}
-<link rel="stylesheet" href="{% static 'Css/styles.css' %}">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap" rel="stylesheet">
-{% endblock %}
-
-{% block nav %}
+{% load static %} {% block estilos %}
+<link rel="stylesheet" href="{% static 'Css/styles.css' %}" />
+<link
+  href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap"
+  rel="stylesheet"
+/>
+{% endblock %} {% block nav %}
 <header>
-<div class="logo">
-    <img src="{% static 'img/logo.png' %}" alt="Logo Nails Studio Pro">
-  </div>  <nav>
+  <div class="logo">
+    <img src="{% static 'img/logo.png' %}" alt="Logo Nails Studio Pro" />
+  </div>
+  <nav>
     <ul>
       <a href="#" class="botones">Inicio</a>
       <a href="#" class="botones">Servicios</a>
@@ -20,59 +20,107 @@
     </ul>
   </nav>
 </header>
-{% endblock %}
-
-{% block content %}
+{% endblock %} {% block content %}
 <section class="hero">
-<div class="hero-text">
-  <h1>Bienvenida, hermosa</h1>
+  <div class="hero-text">
+    <h1>Bienvenida, hermosa</h1>
 
-  <div class="text-with-image">
-    <img src="{% static 'img/estrellita.png' %}" alt="Icono de estrellita">
-    <p>En nuestro centro de belleza cuidamos</p>
-  </div>
-  <p> cada detalle en manicure, pedicure, peluquería,</p>
-  <p> pestañas y cejas para realzar tu belleza natural</p>
-  <p>y brindarte una experiencia única. </p>
-      <div class="hero-buttons">
+    <div class="text-with-image">
+      <img src="{% static 'img/estrellita.png' %}" alt="Icono de estrellita" />
+      <p>En nuestro centro de belleza cuidamos</p>
+    </div>
+    <p>cada detalle en manicure, pedicure, peluquería,</p>
+    <p>pestañas y cejas para realzar tu belleza natural</p>
+    <p>y brindarte una experiencia única.</p>
+    <div class="hero-buttons">
       <a href="#" class="btn-primary">Reservar cita</a>
       <a href="#" class="btn-secondary">Ver estilos</a>
     </div>
   </div>
   <div class="hero-img">
-    <img src="{% static 'img/uñas_1.png' %}" alt="Uñas decoradas">
-        <img src="{% static 'img/uñas_2.png' %}" alt="Uñas decoradas">
-    <img src="{% static 'img/uñas_3.png' %}" alt="Uñas decoradas">
-
+    <img src="{% static 'img/uñas_1.png' %}" alt="Uñas decoradas" />
+    <img src="{% static 'img/uñas_2.png' %}" alt="Uñas decoradas" />
+    <img src="{% static 'img/uñas_3.png' %}" alt="Uñas decoradas" />
   </div>
 </section>
 
 <section class="services">
-  <h2>Nuestros Servicios</h2>
-  <div class="service-cards">
-    <div class="card">
-      <img src="{% static 'img/gel-nails.jpg' %}" alt="Uñas en gel">
-      <h3>Uñas en gel</h3>
+  <div class="contenedor-3columnas">
+    <div class="columna">
+      <h2>Agenda tu cita</h2>
+      <div class="form-cita">
+        <div class="campo">
+          <label for="fecha">📅 Fecha</label>
+          <input type="date" id="fecha" name="fecha" />
+        </div>
+        <div class="campo">
+          <label for="hora">⏰ Hora</label>
+          <input type="time" id="hora" name="hora" />
+        </div>
+        <div class="campo">
+          <label for="manicurista">💅 Manicurista</label>
+          <select id="manicurista" name="manicurista">
+            <option value="">Selecciona una opción</option>
+            <option value="taliana">Taliana Peña</option>
+            <option value="dayana">Dayana Soto</option>
+            <option value="isabella">Isabella Ortiz</option>
+          </select>
+        </div>
+        <button class="btn-agendar">Continuar</button>
+      </div>
     </div>
-    <div class="card">
-      <img src="{% static 'img/spa.jpg' %}" alt="Spa de manos">
-      <h3>Spa de manos</h3>
+
+    <div class="columna">
+      <h2>Nuestros servicios</h2>
+      <ul class="lista-servicios">
+        <li>❤️ Uñas en gel</li>
+        <li>💎 Manicura tradicional</li>
+        <li>🍃 Spa de manos</li>
+        <li>📎 Nail art personalizado</li>
+      </ul>
     </div>
-    <div class="card">
-      <img src="{% static 'img/nail-art.jpg' %}" alt="Nail Art personalizado">
-      <h3>Nail Art personalizado</h3>
+
+    <div class="columna">
+      <h2>Conoce a nuestras artistas</h2>
+      <div class="artistas-grid">
+        <div class="artista">
+          <img src="{% static 'img/taliana.png' %}" alt="Taliana Peña" />
+          <p><strong>Taliana Peña</strong></p>
+        </div>
+        <div class="artista">
+          <img src="{% static 'img/dayana.png' %}" alt="Dayana Soto" />
+          <p><strong>Dayana Soto</strong></p>
+        </div>
+        <div class="artista">
+          <img src="{% static 'img/isabella.png' %}" alt="Isabella Ortiz" />
+          <p><strong>Isabella Ortiz</strong></p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-{% endblock %}
+{% endblock %} {% block footer %}
+<footer class="footer-socials">
+  <div class="social-button">
+    <div class="icon-circle">
+      <i class="fab fa-facebook-f"></i>
+    </div>
+    <span>Nails Studio Pro</span>
+  </div>
 
-{% block footer %}
-<footer>
-  <p>&copy; 2025 Nails Studio Pro. Todos los derechos reservados.</p>
-  <div class="contact">
-    <p>📞 +57 300 000 0000</p>
-    <p>✉️ contacto@nailsstudiopro.com</p>
+  <div class="social-button">
+    <div class="icon-circle">
+      <i class="fab fa-tiktok"></i>
+    </div>
+    <span>@Nails_studio_pro</span>
+  </div>
+
+  <div class="social-button">
+    <div class="icon-circle">
+      <i class="fab fa-instagram"></i>
+    </div>
+    <span>@Nails_studio.pro</span>
   </div>
 </footer>
 {% endblock %}

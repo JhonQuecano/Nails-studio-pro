@@ -1,3 +1,5 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+
 * {
   margin: 0;
   padding: 0;
@@ -21,15 +23,15 @@ header {
 }
 
 header .logo {
-display: flex;
+  display: flex;
   align-items: center;
   font-family: 'Poppins', sans-serif;
-  color: #000; 
+  color: #000;
   padding-top: 1%;
 }
 
 header .logo img {
-  height: 50px; 
+  height: 50px;
 }
 
 header nav ul {
@@ -51,12 +53,12 @@ header nav ul li a:hover {
 
 .text-with-image {
   display: flex;
-  align-items: center; 
-  gap: 8px; 
+  align-items: center;
+  gap: 8px;
 }
 
 .text-with-image img {
-  width: 24px;
+  width: 30px;
   height: auto;
 }
 
@@ -64,17 +66,18 @@ header nav ul li a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 40 40px 40px 50px; 
+  padding: 40px 40px 40px 50px;
 }
 
 .hero-text h1 {
   font-family: 'Poppins', sans-serif;
   font-size: 48px;
   color: #000000;
-  font-weight: 300
+  font-weight: 300;
 }
+
 .hero-text p {
-  font-size: 20px;    
+  font-size: 20px;
   color: #000000;
   padding-bottom: 2%;
   font-family: 'Poppins', sans-serif;
@@ -86,17 +89,6 @@ header nav ul li a:hover {
   padding-top: 20px;
   gap: 20px;
 }
-
-.text-with-image {
-  display: flex;
-  align-items: center; 
-}
-
-.text-with-image img {
-  width: 30px;  
-  height: auto;
-}
-
 
 .btn-primary {
   background-color: #C89071;
@@ -128,35 +120,153 @@ header nav ul li a:hover {
 }
 
 .services {
-  text-align: center;
-  padding: 50px;
+  padding: 50px 30px;
   background-color: #FCF4EC;
-}
-
-.services h2 {
   font-family: 'Poppins', sans-serif;
-  font-size: 32px;
-  color: #D86C8C;
+  color: #4a4a4a;
 }
 
-.service-cards {
+.contenedor-3columnas {
   display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 30px;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
 }
 
-.card {
-  background-color: #FFF;
+.columna {
+  flex: 30%;
+  min-width: 300px;
+  background: white;
+  padding: 30px 20px;
   border-radius: 12px;
-  padding: 15px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-  width: 250px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
 }
 
-.card img {
+.columna:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.columna h2 {
+  font-weight: 600;
+  font-family: 'Open Sans', sans-serif;
+  margin-bottom: 25px;
+  font-size: 1.5rem;
+  color: #000000;
+  text-align: center;
+}
+
+.form-cita {
+  text-align: left;
+}
+
+.campo {
+  margin-bottom: 20px;
+}
+
+.campo label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: #000000;
+}
+
+.campo input,
+.campo select {
   width: 100%;
+  padding: 10px 12px;
+  border: 1.5px solid #d9c5b4;
   border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.campo input:focus,
+.campo select:focus {
+  outline: none;
+  border-color: #b2735b;
+  box-shadow: 0 0 5px #b2735b;
+}
+
+.btn-agendar {
+  margin-top: 5%;
+  width: 100%;
+  background-color: #b2735b;
+  color: white;
+  padding: 12px 0;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-agendar:hover {
+  background-color: #a15e49;
+}
+
+.lista-servicios {
+  list-style: none;
+  padding: 0;
+  font-size: 1.1rem;
+  line-height: 2rem;
+  color: #000000;
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+.lista-servicios li {
+  margin-bottom: 15px;
+  padding-left: 25px;
+  position: relative;
+  font-weight: 500;
+}
+
+.lista-servicios li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #b2735b;
+  font-size: 1.5rem;
+  top: 2px;
+}
+
+.artistas-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+  align-items: center;
+}
+
+.artista {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: left;
+  width: 100%;
+  gap: 4vh;
+  max-width: 600px;
+}
+
+.artista img {
+  width: 23%;
+  height: 30%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #b2735b;
+  transition: transform 0.3s ease;
+}
+
+.artista img:hover {
+  transform: scale(1.05);
+}
+
+.artista p {
+  font-weight: 600;
+  color: #353433;
+  text-align: center;
+  margin: 0;
 }
 
 .botones {
@@ -173,15 +283,16 @@ header nav ul li a:hover {
   color: white;
 }
 
-.login{
-    background-color: #C89071;
-    color: white;
+.login {
+  background-color: #C89071;
+  color: white;
   padding: 5px 40px;
-    border-radius: 40px;
-    text-decoration: none;
-    font-weight: 600;
-    font-family: 'Poppins', sans-serif;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
 }
+
 .login:hover {
   background-color: #a5765c;
 }
@@ -208,13 +319,52 @@ header nav ul li a:hover {
   border-radius: 8px;
 }
 
-footer {
-  background-color: #FCF4EC;
-  padding: 20px 50px;
+.footer-socials {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  border-top: none;
+  gap: 100px;
+  background-color: #FCF4EC;
+  padding-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.social-button {
+  display: flex;
+  align-items: center;
+  background-color: #fbeee4;
+  padding: 10px 70px;
+  border-radius: 20px;
+  font-family: sans-serif;
+  font-weight: 500;
+  color: #000;
+  gap: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.social-button:hover {
+  transform: scale(1.05);
+}
+
+.icon-circle {
+  background-color: #000;
+  color: #fff;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 14px;
 }
 
+@media (max-width: 992px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 30px;
+    }
+  }
+
+ 
