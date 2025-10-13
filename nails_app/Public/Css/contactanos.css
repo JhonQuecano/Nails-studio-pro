@@ -44,14 +44,15 @@ align-items: stretch;
 /* ---------- INFORMACIÓN DE CONTACTO ---------- */
 
 .info-contacto {
-  background-color: #fff0f6;
+  background-color: #fff0f788;
   border-radius: 15px;
   padding: 25px;
   text-align: left;
+  box-shadow: 0 0 10px rgba(226, 107, 169, 0.15);
 }
 
 .info-contacto h3 {
-  color: #e26ba9;
+  color: #d481ac;
   font-weight: 600;
   margin-bottom: 15px;
 }
@@ -81,12 +82,12 @@ align-items: stretch;
   text-align: left;
   padding: 25px;
   border-radius: 15px;
-  background: #fff0f7;
+  background: #fff0f788;
   box-shadow: 0 0 10px rgba(226, 107, 169, 0.15);
 }
 
 .formulario-contacto h3 {
-  color: #e26ba9;
+  color: #d481ac;
   font-weight: 600;
   margin-bottom: 15px;
   text-align: center;
