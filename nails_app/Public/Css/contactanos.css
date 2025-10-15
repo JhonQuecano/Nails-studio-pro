@@ -44,7 +44,7 @@ align-items: stretch;
 /* ---------- INFORMACIÓN DE CONTACTO ---------- */
 
 .info-contacto {
-  background-color: #fff0f788;
+  background-color: #c6a08b2e;
   border-radius: 15px;
   padding: 25px;
   text-align: left;
@@ -52,7 +52,7 @@ align-items: stretch;
 }
 
 .info-contacto h3 {
-  color: #d481ac;
+  color: #42403f;
   font-weight: 600;
   margin-bottom: 15px;
 }
@@ -72,7 +72,7 @@ align-items: stretch;
 }
 
 .info-contacto i {
-  color: #e26ba9;
+  color: #C89071;
   font-size: 18px;
 }
 
@@ -82,12 +82,12 @@ align-items: stretch;
   text-align: left;
   padding: 25px;
   border-radius: 15px;
-  background: #fff0f788;
+  background: #c6a08b2e;
   box-shadow: 0 0 10px rgba(226, 107, 169, 0.15);
 }
 
 .formulario-contacto h3 {
-  color: #d481ac;
+  color: #42403f;
   font-weight: 600;
   margin-bottom: 15px;
   text-align: center;
@@ -103,7 +103,7 @@ align-items: stretch;
 .formulario-contacto textarea {
   width: 100%;
   padding: 12px 15px;
-  border: 1px solid #f3a9c3;
+  border: 1px solid #C89071;
   border-radius: 10px;
   font-size: 15px;
   font-family: 'Poppins', sans-serif;
@@ -114,12 +114,12 @@ align-items: stretch;
 
 .formulario-contacto input:focus,
 .formulario-contacto textarea:focus {
-  border-color: #e26ba9;
+  border-color: #5e473a;
   box-shadow: 0 0 8px rgba(226, 107, 169, 0.3);
 }
 
 .btn-enviar {
-  background-color: #e26ba9;
+  background-color: #C89071;
   color: #fff;
   border: none;
   padding: 12px 20px;
@@ -132,7 +132,7 @@ align-items: stretch;
 }
 
 .btn-enviar:hover {
-  background-color: #c85892;
+  background-color: #a5765c;
 }
 
 /* ---------- MAPA ---------- */
