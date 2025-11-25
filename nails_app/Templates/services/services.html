@@ -1,0 +1,51 @@
+{% extends 'home.html' %}
+{% load static %}
+
+{% block estilos %}
+  {{ block.super }}
+  <link rel="stylesheet" href="{% static 'Css/services.css' %}">
+{% endblock %}
+
+{% block content %}
+<main class="servicios-main">
+  <div class="contenedor-servicios">
+    
+    <div class="servicios-header">
+      <form method="GET" action="{% url 'lista_servicios' %}">
+        <select name="categoria" onchange="this.form.submit()" class="filtro-dropdown">
+          
+          <option value="">Todos los servicios</option>
+
+          {% for categoria in categorias %}
+            <option value="{{ categoria.nombre }}" {% if request.GET.categoria == categoria.nombre %}selected{% endif %}>
+              {{ categoria.nombre }}
+            </option>
+          {% endfor %}
+          
+        </select>
+      </form>
+    </div>
+
+    <div class="servicios-grid">
+      
+      {% for servicio in servicios %}
+      <div class="servicio-card">
+        {% if servicio.imagen %}
+          <img src="{{ servicio.imagen.url }}" alt="{{ servicio.nombre }}">
+        {% else %}
+          <img src="{% static 'images/default.jpg' %}" alt="Servicio sin imagen">
+        {% endif %}
+        
+        <div class="servicio-info">
+          <h3>{{ servicio.nombre }}</h3>
+          <p class="precio">${{ servicio.precio|floatformat:0 }}</p>
+        </div>
+      </div>
+      {% empty %}
+        <p>No hay servicios disponibles en esta categoría.</p>
+      {% endfor %}
+
+    </div>
+  </div>
+</main>
+{% endblock %}
