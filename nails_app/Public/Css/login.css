@@ -1,0 +1,96 @@
+/* Contenedor del login */
+.contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+}
+
+/* Caja del formulario */
+.form {
+    background: #ffffff8d;
+    padding: 35px 40px;
+    width: 100%;
+    max-width: 380px;
+    border-radius: 18px;
+    min-height: 57vh;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Título */
+.form h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+/* Campos */
+.form div {
+    margin-bottom: 18px;
+}
+
+.form label {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #555;
+}
+
+.form input {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    background-color: #ffffffbb;
+    font-size: 14px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form input:focus {
+    outline: none;
+    border-color: #C89071;
+    box-shadow: #000000;
+}
+
+/* Botón */
+.boton {
+    margin-top: 5%;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 14px;
+    background: #C89071;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.boton:hover {
+    background: #a5765c;
+    transform: translateY(-2px);
+}
+
+.boton:active {
+    transform: translateY(0);
+}
+
+/* Mensaje de error */
+.alert {
+    background: #ffe6ec;
+    border: 1px solid #f8b4c4;
+    padding: 12px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.alert p {
+    color: #811616;
+    font-size: 14px;
+}
+
+body.login-page .footer-socials {
+    background-color: #F3E4DC;
+}

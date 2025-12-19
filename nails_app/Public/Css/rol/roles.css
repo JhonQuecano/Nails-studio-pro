@@ -1,0 +1,86 @@
+/* CONTENEDOR GENERAL */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 20px;
+}
+
+/* FORMULARIO */
+.form {
+    background: #ffffff8d;
+    width: 100%;
+    max-width: 420px;
+    padding: 40px 45px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* TÍTULO */
+.form h2 {
+    margin-bottom: 50px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #000000;
+    font-weight: 600;
+}
+
+/* CAMPOS */
+.form div {
+    margin-bottom: 20px;
+}
+
+.form label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #000000;
+}
+
+/* INPUTS */
+.form input {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 14px;
+    background-color: #ffffffbb;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.form input:focus {
+    outline: none;
+    border-color: #C89071;
+    box-shadow: 0 0 0 3px rgba(200, 144, 113, 0.2);
+}
+
+/* BOTÓN */
+.save {
+    margin-top: 5%;
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #C89071, #e2b59c);
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.save:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(200, 144, 113, 0.4);
+}
+
+.save:active {
+    transform: translateY(0);
+}
+
+.roles-page .footer-socials {  
+    background-color: transparent;   
+}
+
+
+

@@ -1,0 +1,93 @@
+{% extends 'home.html' %}
+{% load static %}
+
+{% block body_class %}list-page{% endblock %}
+
+{% block title %} Listar Roles {% endblock %}
+
+{% block estilos %}
+    {{ block.super }}
+        <link rel="stylesheet" href="{% static 'Css/rol/table.css' %}">
+{% endblock %}
+
+{% block nav %}
+    {{ block.super }}
+{% endblock %}
+
+{% block content %}
+<main class="list-page">
+<head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+</head>
+<div class="table-container">
+    <h2>Listado de Roles</h2>
+
+    <table class="tabla-roles">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Código</th>
+                <th>Actualizar</th>
+                <th>Eliminar</th>
+            </tr>
+        </thead>
+
+<tbody id="roles-table">
+{% for i in roles %}
+<tr data-id="{{ i.id }}">
+<td class="drag-handle">
+    <i class="fas fa-grip-vertical"></i> {{ i.name }}
+</td>
+    <td>{{ i.code }}</td>
+    <td>
+        <a href="{% url 'update_rol' i.id %}" class="bot_actualizar">
+            <i class="fas fa-edit"></i>
+        </a>
+    </td>
+    <td>
+        <a href="{% url 'delete_rol' i.id %}" class="bot_eliminar"
+           onclick="return confirm('¿Deseas eliminar el rol?')">
+            <i class="fas fa-trash"></i>
+        </a>
+    </td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+</div>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+
+    const tbody = document.getElementById('roles-table');
+
+    new Sortable(tbody, {
+        animation: 150,
+        handle: '.drag-handle',
+
+        onEnd: function () {
+            const order = [];
+
+            tbody.querySelectorAll('tr').forEach(row => {
+                order.push(row.dataset.id);
+            });
+
+            fetch("{% url 'update_rol_order' %}", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "X-CSRFToken": "{{ csrf_token }}"
+                },
+                body: JSON.stringify({ order: order })
+            });
+        }
+    });
+});
+</script>
+{% endblock %}
+
+{% block footer %}
+    {{ block.super }}
+{% endblock %}

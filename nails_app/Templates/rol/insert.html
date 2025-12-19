@@ -1,0 +1,44 @@
+{% extends 'home.html' %}  
+{% load static %} 
+
+{% block body_class %}roles-page{% endblock %}
+
+{% block title %}Crear Rol{% endblock %}  
+
+{% block estilos %}
+    {{ block.super }}
+        <link rel="stylesheet" href="{% static 'Css/rol/roles.css' %}">
+{% endblock %}
+
+{% block nav %}
+    {{ block.super }}
+{% endblock %}
+
+{% block content %}
+<main class="roles-page">
+    <div class="container">
+        <form class="form" action="" method="POST">
+            <h2>Crear Rol</h2>
+            {% csrf_token %}
+            <div>
+                <label for="name">Nombre: </label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div>
+                <label for="code">Codigo: </label>
+                <input type="text" id="code" name="code" required>
+            </div>
+                        
+            <div>
+                <button  class="save" type="submit" value="Crear" name="Guardar" class="submit-button">Crear</button>
+            </div>
+        </form>
+
+    </div>
+</main>
+{% endblock %}
+
+{% block footer %}
+    {{ block.super }} 
+{% endblock %}

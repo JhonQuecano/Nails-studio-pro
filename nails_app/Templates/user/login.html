@@ -1,0 +1,54 @@
+{% extends 'home.html' %}
+{% load static %}
+
+{% block body_class %}login-page{% endblock %}
+
+{% block title %}Iniciar Sesión{% endblock %}
+
+{% block estilos %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'Css/login.css' %}">
+{% endblock %}
+
+{% block content %}
+<main class="login-page">
+<div class="contenedor">
+
+    {% if messages %}
+        <div class="alert">
+            {% for message in messages %}
+                <p>{{ message }}</p>
+            {% endfor %}
+        </div>
+    {% endif %}
+
+    <form class="form" method="POST">
+        {% csrf_token %}
+        <h2>Iniciar Sesión</h2>
+
+        <div>
+            <label for="username">Usuario</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+
+        <div>
+            <label for="password">Contraseña</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+
+        <div>
+            <button class="boton" type="submit">Iniciar Sesión</button>
+            <br>
+        </div>
+        <h5> ¿No tienes una cuenta? <a href="{% url 'insert_user' %}">Regístrate aquí</a></h5>
+        <br>
+        <h5> ¿Olvidaste tu contraseña? <a href="#">Recupérala aquí</a></h5>
+    </form>
+
+</div>
+</main>
+{% endblock %}
+
+{% block footer %}
+    {{ block.super }}
+{% endblock %}

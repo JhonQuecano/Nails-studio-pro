@@ -4,6 +4,8 @@
   href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap"
   rel="stylesheet"
 />
+
+<body class="{% block body_class %}{% endblock %}">
 {% endblock %} {% block nav %}
 <header>
   <div class="logo">
@@ -15,12 +17,17 @@
       <a href="#" class="botones">Servicios</a>
       <a href="#" class="botones">Galeria</a>
       <a href="#" class="botones">Citas</a>
+      <a href="{% url 'insert_rol' %}" class="rol">Roles</a>
       <a href="{% url 'contacto' %}" class="botones">Contacto</a>
-      <a href="#" class="login">Iniciar Sesion</a>
+      <a href="{% url 'login_user'%}" class="login">Iniciar Sesion</a>
+      <a href="{% url 'insert_user'%}" class="register">Registro</a>
+
     </ul>
   </nav>
 </header>
-{% endblock %} {% block content %}
+{% endblock %}
+<main>
+{% block content %}
 <section class="hero">
   <div class="hero-text">
     <h1>Bienvenida, hermosa</h1>
@@ -106,7 +113,9 @@
   <img src="{% static 'img/whatsapp.png' %}" alt="WhatsApp">
 </a>
 
-{% endblock %} {% block footer %}
+{% endblock %} 
+</main>
+{% block footer %}
 <footer class="footer-socials">
   <div class="social-button">
     <div class="icon-circle">

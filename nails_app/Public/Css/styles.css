@@ -1,5 +1,19 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
 
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -283,6 +297,21 @@ header nav ul li a:hover {
   color: white;
 }
 
+.register {
+  background-color: #C89071;
+  color: white;
+  padding: 5px 40px;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+}
+
+.register:hover {
+  background-color: #a5765c;
+}
+
+
 .login {
   background-color: #C89071;
   color: white;
@@ -296,6 +325,20 @@ header nav ul li a:hover {
 .login:hover {
   background-color: #a5765c;
 }
+
+.rol {
+    color: rgb(0, 0, 0);
+    padding: 5px 13px;
+    border-radius: 40px;
+    text-decoration: none;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+  }
+
+.rol:hover {
+  background-color: #a5765c;
+}
+
 
 .gallery {
   padding: 50px;
@@ -323,7 +366,7 @@ header nav ul li a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 100px;
+  gap: 200px;
   background-color: #FCF4EC;
   padding-bottom: 30px;
   flex-wrap: wrap;

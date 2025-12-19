@@ -1,0 +1,75 @@
+{% extends 'home.html' %}
+{% load static %}
+
+{% block body_class %}list-page{% endblock %}
+
+{% block title %}Listar Usuarios{% endblock %}
+
+{% block estilos %}
+    {{ block.super }}
+        <link rel="stylesheet" href="{% static 'Css/user/list.css' %}">
+{% endblock %}
+
+{% block nav %}
+    {{ block.super }}
+{% endblock %}
+
+{% block content %}
+<main class="list-page">
+<head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+</head>
+    <div class="table-container">
+    <h2>Listado de Usuarios</h2>
+        <table class="table-users">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Tipo de Documento</th>
+                    <th>Número Documento</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Usuario</th>
+                    <th>Correo Electrónico</th>
+                    <th>Teléfono</th>
+                    <th>Rol</th>
+                    <th>Actualizar</th>
+                    <th>Eliminar</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                {% for i in usuarios %}
+                <tr>
+                    <td>{{i.id}}</td>
+                    <td>{{i.tipo_doc}}</td>
+                    <td>{{i.document}}</td>
+                    <td>{{i.first_name}}</td>
+                    <td>{{i.last_name}}</td>
+                    <td>{{i.username}}</td>
+                    <td>{{i.email}}</td>
+                    <td>{{i.phone}}</td>
+                    <td>{{i.rol.name}}</td>
+                    <td><a href="{% url 'update_user' i.id %}" class="bot_actualizar">             
+                        <i class="fas fa-edit"></i>
+                    </a></td>
+                    <td><a href="{% url 'delete_user' i.id %}" class="bot_eliminar" 
+                        onclick="return(confirm('¿Deseas eliminar el usuario?'))">
+                                    <i class="fas fa-trash"></i>
+
+                    </a>
+                </td>
+
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <div>
+        </div>
+    </div>
+</main>
+{% endblock %}
+
+{% block footer %}
+    {{ block.super }}
+{% endblock %}

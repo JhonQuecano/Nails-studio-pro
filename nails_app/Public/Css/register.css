@@ -1,0 +1,101 @@
+/* =========================
+   CONTENEDOR REGISTRO
+========================= */
+.container {
+    display: flex;
+    justify-content: center;
+    padding: px 30px;
+    min-height: calc(100vh - 220px);
+}
+
+/* =========================
+   FORMULARIO REGISTRO
+========================= */
+.form-registro {
+    margin-top: 1%;
+    background: #ffffff8d;
+    padding: 20px 45px;
+    width: 100%;
+    max-width: 760px;
+    border-radius: 20px;
+    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.15);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px 30px;
+}
+
+/* TÍTULO */
+.form-registro h2 {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* CAMPOS */
+.form-registro div {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-registro label {
+    margin-bottom: 6px;
+    font-size: 14px;
+    color: #000000;
+}
+
+.form-registro input,
+.form-registro select {
+    padding: 10px 12px;
+    background-color: #ffffffa3;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* FOCUS */
+.form-registro input:focus,
+.form-registro select:focus {
+    outline: none;
+    border-color: #C89071;
+    box-shadow: 0 0 0 2px rgba(200, 144, 113, 0.25);
+}
+
+
+/* BOTÓN */
+.form-registro .boton {
+    margin-top: 7%;
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 16px;
+    background: #C89071;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.form-registro .boton:hover {
+    background: #a5765c;
+    transform: translateY(-2px);
+}
+
+.form-registro .boton:active {
+    transform: translateY(0);
+}
+
+.register-page .footer-socials {
+    background-color: transparent;   
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .form-registro {
+        grid-template-columns: 1fr;
+        padding: 30px 25px;
+    }
+}

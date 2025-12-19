@@ -1,0 +1,133 @@
+/* CONTENEDOR */
+.table-container {
+    max-width: 65%;
+    margin: 60px auto;
+    padding: 30px;
+    background: #ffffffb1;
+    border-radius: 22px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+/* TÍTULO */
+.table-container h2 {   
+    text-align: center;
+    margin-bottom: 30px;
+    color: #C89071;
+    font-weight: 600;
+}
+
+/* TABLA */
+.tabla-roles {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+/* ENCABEZADO */
+.tabla-roles thead {
+    background: linear-gradient(135deg, #C89071, #e2b59c);
+}
+
+.tabla-roles th {
+    padding: 14px;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* CUERPO */
+.tabla-roles td {
+    padding: 14px;
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+}
+
+/* FILAS */
+.tabla-roles tbody tr {
+    background: #fff;
+    transition: background 0.3s ease;
+}
+
+.tabla-roles tbody tr:nth-child(even) {
+    background: #FCF4EC;
+}
+
+.tabla-roles tbody tr:hover {
+    background: #f3dfd1;
+}
+
+/* BOTONES */
+.btn {
+    width: 38px;
+    height: 38px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #fff;
+    transition: transform 0.2s ease, background 0.3s ease;
+    text-decoration: none;
+}
+
+/* BOTÓN ACTUALIZAR */
+
+.bot_actualizar,
+.bot_eliminar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50px;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+.bot_actualizar {
+    background-color: #C89071;
+}
+
+/* BOTÓN ELIMINAR */
+
+.bot_eliminar {
+    background-color: #cb3e2f;
+}
+
+.bot_actualizar:hover,
+.bot_eliminar:hover {
+    transform: scale(1.1);
+    opacity: 0.9;
+}
+
+/* ESTILOS PARA Drag and drop */
+
+.drag-handle {
+    cursor: grab;
+    display: flex;
+    align-items: center;
+    gap:32%;
+    font-weight: 500;
+}
+
+.drag-handle i {
+    color: #999;
+    font-size: 14px;
+}
+
+.drag-handle:active {
+    cursor: grabbing;
+}
+
+/* Footer */
+.list-page .footer-socials {
+    background-color: transparent;   
+}
+
+
+
+
+

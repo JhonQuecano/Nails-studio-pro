@@ -1,0 +1,42 @@
+{% extends 'home.html' %}  
+{% load static %} 
+
+{% block body_class %}update-page{% endblock %}
+
+{% block title %}Actualizar Rol{% endblock %}  
+
+{% block estilos %}
+    {{ block.super }}
+        <link rel="stylesheet" href="{% static 'Css/rol/update.css' %}">
+{% endblock %}
+
+{% block nav %}
+    {{ block.super }}
+{% endblock %}
+
+{% block content %}
+<main class="update-page">
+    <div class="container">
+                <form class="form" action="" method="POST">
+                    {% csrf_token %}
+                    <h2>Actualizar Rol</h2>
+                    <div>
+                        <label for="name">Nombre: </label>
+                        <input type="text" id="name" name="name" value="{{rol.name}}" required>
+                    </div>
+                    <div>
+                        <label for="code">Codigo: </label>
+                        <input type="text" id="code" name="code" value="{{rol.code}}" required>
+                    </div>
+                                        
+                    <div>
+                        <button  class="save" type="submit" value="Crear" name="Guardar" class="submit-button">Actualizar</button>
+                    </div>
+                </form>
+            </div>
+</main>
+{% endblock %}
+
+{% block footer %}
+    {{ block.super }} 
+{% endblock %}
